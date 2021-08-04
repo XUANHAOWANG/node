@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/XUANHAOWANG/node/issues"
   },
-  "homepage": "https://github.com/XUANHAOWANG/node#readme"
+  "homepage": "https://github.com/XUANHAOWANG/node#readme",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
