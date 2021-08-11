@@ -1,9 +1,9 @@
 let spacing=40;
 let x=spacing/2;
 let y=spacing/2;
-let radius=30;
+let radius=30;//cycle size
 
-function setup(){
+function setup(){//set canvas
     createCanvas(1320,640);
     background(51)
 }
