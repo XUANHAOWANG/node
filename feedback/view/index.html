@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>留言本</title>
+ 
   <!-- 
     浏览器收到 HTML 响应内容之后，就要开始从上到下依次解析，
     当在解析的过程中，如果发现：
@@ -25,20 +26,22 @@
 
       不要再想文件路径了，把所有的路径都想象成 url 地址
     -->
-  <!-- <link rel="stylesheet" href="/public/css/main.css"> -->
+  <link rel="stylesheet" href="/public/css/main.css">
+  <!-- 当浏览器响应后会从上到下解析 如果发现具有src或者link的href属性的标签 （外链的资源）例如 link script img iframe等
+  浏览器会自动对这些资源发动请求 -->
 </head>
 
 <body>
   <div class="header container">
     <div class="page-header">
       <h1>Example page header <small>Subtext for header</small></h1>
-      <a class="btn btn-success" href="/feedback/view/post.html">发表留言</a>
+      <a class="btn btn-success" href="/post">comment</a>
     </div>
   </div>
   <div class="comments container">
     <ul class="list-group">
       {{each comments}}
-      <li class="list-group-item">{{ $value.name }}说：{{ $value.message }} <span class="pull-right">{{ $value.dateTime }}</span></li>
+      <li class="list-group-item">{{ $value.name }}said：{{ $value.message }} <span class="pull-right">{{ $value.dateTime }}</span></li>
       {{/each}}
     </ul>
   </div>

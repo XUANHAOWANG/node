@@ -13,6 +13,31 @@ if(url==='/'){
         }
         res.end(data)
     })
+
+}else if(url.startsWith('/public')){
+    console.log(url)
+    fs.readFile('.'+url,(err,data)=>{
+        if(err){
+            res.end(err)
+        }
+        res.end(data)
+    })
+}else if(url==='/post'){
+    fs.readFile('./view/post.html',(err,data)=>{
+        console.log(url)
+        if(err){
+            res.end('404 not found')
+            console.log(err)
+        }
+        res.end(data)
+    })
+}else{
+    fs.readFile('./view/404.html',(err,data)=>{
+        if(err){
+            return res.end('404 not found')
+        }
+        res.end(data)
+    })
 }
     }
 ).listen(3100,function(){
