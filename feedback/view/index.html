@@ -38,10 +38,10 @@
       <a class="btn btn-success" href="/post">comment</a>
     </div>
   </div>
-  <div class="comments container">
+  <div class="comments_container">
     <ul class="list-group">
       {{each comments}}
-      <li class="list-group-item">{{ $value.name }}said：{{ $value.message }} <span class="pull-right">{{ $value.dateTime }}</span></li>
+      <li class="list-group-item">{{ $value.name }}said：{{ $value.message }} <span class="pull-right">{{ $value.date }}</span></li>
       {{/each}}
     </ul>
   </div>
