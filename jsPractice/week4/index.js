@@ -69,5 +69,26 @@ function draw() {
             }
 
         }
+        for(let i = 0; i < dots.length; i++) {
+            if(frameCount %800===0){
+                isReversed=!isReversed
+                resetSketch()
+            }
+        }
+        pop()
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

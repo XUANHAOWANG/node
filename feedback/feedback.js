@@ -44,7 +44,8 @@ if(pathname==='/'){
     //生成日期 加入到数组中
     //让用户跳转到首页
     const comment = parseObj.query
-    comment.date='2021/5/8'
+    var myDate=new Date()
+    comment.date=myDate
     comments.push(comment)
     // 服务端这个时候已经把数据存储好了，接下来就是让用户重新请求 / 首页，就可以看到最新的留言内容了
 

@@ -16,11 +16,35 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <button type="button" id="btn1">btn1</button>
+    
 <div>
     <button type="button" id="btn"> btn </button>
 </div>
-   
+<a href="Apache/movie.mp4">明日之战</a>
+   <script type="text/javascript" >
+var btn=document.getElementById('btn')
+
+btn.onclick=function() {
+    // create a new div element
+    const newDiv = document.createElement("div");
+  
+    // and give it some content
+    const newContent = document.createTextNode("Hi there and greetings!");
+ 
+    // add the text node to the newly created div
+    newDiv.appendChild(newContent);
+  
+    // add the newly created element and its content into the DOM
+    const currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv);
+  };
+
+function Dele(){
+    const rem=this.parentElement.firstChild.remove()
+}
+
+
+</script>
         
         <script src="test.js" async defer></script>
     </body>
